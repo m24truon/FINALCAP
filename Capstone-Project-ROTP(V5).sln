@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone-Project-ROTP(V5)", "Capstone-Project-ROTP(V5).csproj", "{45B5DF1B-C5F2-8AB0-B134-164FBD74FA91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone-Project-ROTP(V5).Editor", "Capstone-Project-ROTP(V5).Editor.csproj", "{AC226E7B-86E2-A683-4996-FAD82EDEF557}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45B5DF1B-C5F2-8AB0-B134-164FBD74FA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B5DF1B-C5F2-8AB0-B134-164FBD74FA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B5DF1B-C5F2-8AB0-B134-164FBD74FA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B5DF1B-C5F2-8AB0-B134-164FBD74FA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC226E7B-86E2-A683-4996-FAD82EDEF557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC226E7B-86E2-A683-4996-FAD82EDEF557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC226E7B-86E2-A683-4996-FAD82EDEF557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC226E7B-86E2-A683-4996-FAD82EDEF557}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
