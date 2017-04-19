@@ -40,6 +40,7 @@ public class WeaponHandler : MonoBehaviour
     private bool reload;
     private int weaponType;
     private bool settingWeapon;
+    private Weapon ammo;
 
     // Use this for initialization
     void OnEnable()
@@ -114,21 +115,7 @@ public class WeaponHandler : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Weapon") // && cash == 400
-        {
-
-            Debug.Log("HI");
-
-            //currentWeapon = newWeapon;
-            //weaponsList[2] = newWeapon;
-            Destroy(other.gameObject);
-
-            // SetupWeapons();
-        }
-
-    }
+    
 
 
 
@@ -264,4 +251,6 @@ public class WeaponHandler : MonoBehaviour
             animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 0);
         }
     }
+
+  
 }

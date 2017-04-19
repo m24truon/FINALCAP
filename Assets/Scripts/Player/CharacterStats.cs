@@ -9,10 +9,11 @@ public class CharacterStats : MonoBehaviour
     private CharacterController characterController { get { return GetComponent<CharacterController>(); } set { characterController = value; } }
     private RagdollManager ragdollManager { get { return GetComponentInChildren<RagdollManager>(); } set { ragdollManager = value; } }
 
+
     public float health = 100;
     public int faction;
     private SoundController sc;
-	public int scoreValue = 10;  
+    public int scoreValue = 80;
     public GameObject player;
     public Slider healthBar;
 
@@ -39,7 +40,10 @@ public class CharacterStats : MonoBehaviour
 
     void Start()
     {
+
         anim = GetComponent<Animator>();
+
+
     }
     // Update is called once per frame
     void Update()
@@ -69,24 +73,27 @@ public class CharacterStats : MonoBehaviour
             health += 25;
         }
 
-        if(other.gameObject.tag == "Zombie")
+        if (other.gameObject.tag == "Zombie")
         {
             Debug.Log("Zombie");
             health -= 1;
         }
 
-        if(other.gameObject.tag == "Boss")
+        if (other.gameObject.tag == "Boss")
         {
             health -= 20;
         }
+
+
     }
 
     public void Damage(float damage)
     {
         health -= damage;
         healthBar.value = health;
+
         InitCBT(damage.ToString());
-        
+
 
     }
     void healthFix()
@@ -114,10 +121,10 @@ public class CharacterStats : MonoBehaviour
         if (ragdollManager != null)
             ragdollManager.Ragdoll();
 
-		if (health == 0) 
-		{
-			ScoreManager.score += scoreValue;
-		}
+        if (health == 0)
+        {
+            ScoreManager.score += scoreValue;
+        }
     }
 
     void InitCBT(string text)
@@ -133,4 +140,7 @@ public class CharacterStats : MonoBehaviour
         temp.GetComponent<Animator>().SetTrigger("Hit");
         Destroy(temp.gameObject, 2);
     }
+
+
+
 }

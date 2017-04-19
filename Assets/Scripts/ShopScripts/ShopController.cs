@@ -7,10 +7,14 @@ public class ShopController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-			OpenShop ();
+        
+            OpenShop();
+        
 	}
 
-	void OpenShop()
+
+
+    void OpenShop()
 	{
 		shopPanel.SetActive (true);
 		Time.timeScale = 0;

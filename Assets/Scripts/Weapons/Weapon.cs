@@ -158,7 +158,7 @@ public class Weapon : MonoBehaviour
 
 
 
-        if (Physics.Raycast(bSpawnPoint, dir, out hit, weaponSettings.range, weaponSettings.bulletLayers))
+        if (Physics.Raycast(bSpawnPoint, dir, out hit, weaponSettings.range))
         {
             HitEffects(hit);
 
@@ -198,7 +198,7 @@ public class Weapon : MonoBehaviour
 
     void HitEffects(RaycastHit hit)
     {
-        if (hit.collider.gameObject.isStatic)
+        if (hit.collider.gameObject.tag == "Zombie" || hit.collider.gameObject.tag == "Skeleton" || hit.collider.gameObject.tag == "Boss")
         {
             if (weaponSettings.decal)
             {
@@ -208,7 +208,7 @@ public class Weapon : MonoBehaviour
                 Transform decalT = decal.transform;
                 Transform hitT = hit.transform;
                 decalT.SetParent(hitT);
-                Destroy(decal, Random.Range(15.0f, 20.0f));
+                Destroy(decal, Random.Range(0.4f, 0.5f));
             }
         }
     }
@@ -344,4 +344,6 @@ public class Weapon : MonoBehaviour
     {
         owner = wp;
     }
+
+  
 }
